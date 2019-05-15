@@ -1,0 +1,91 @@
+/* Enter your custom styles here */
+.cardview .sapMLIB{
+	border:none;
+	background:none;
+}
+.cardview .card{
+	border:1px solid #333;
+	box-shadow:1px 1px 5px 2px RGBA(0, 0, 0, 0.5);
+}
+.cardview .card .midFont.sapMText{
+	font-size:1.2rem;
+}
+.cardview .card .boldText{
+	font-weight:bold;
+}
+.cardview .card .title{
+	padding:15px 0 0 17px;
+	font-size:1.5rem;
+}
+.cardview .card .spliterLine{
+	border-bottom:1px solid #333;
+}
+.cardview .card .cardContent{
+	width:calc(100% - 10px);
+}
+.cardview .card .cardContentInner{
+	padding-left:15px;
+	padding-right:10px;
+	width:100%;
+}
+.cardview .card .paddingTopBottom{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.cardview .card .paddingBottom{
+	padding-bottom:10px;
+}
+.cardview .card .country{
+	width:40%;
+}
+.cardview .card .person{
+	width:60%;
+}
+.cardview .card .person .midFont,
+.cardview .card .categoryText .midFont{
+	padding-right:2rem;
+}
+.cardview .card .statusCon{
+	background:#ededed;
+}
+.sapUiTableTdFirst .sapUiTableCell{
+	padding:0;
+}
+.sapUiTableTr>td.sapUiTableTdFirst{
+	padding:0 !important;
+}
+
+.colorIndicator{
+	width:20px;
+	height:40px;
+}
+.card .colorIndicator{
+	height:270px;
+	width:10px;
+}
+.redIndicator{
+	background:#b00;
+}
+.greenIndicator{
+	background:#2b7c2b;
+}
+.yellowIndicator{
+	background:#e78c07;
+}
+.numberStyle1,
+.numberStyle1 .sapMNCValue{
+	font-size:20px;
+	font-weight:bold;
+}
+.greenNumber{
+	color:#2b7c2b;
+}
+.redNumber{
+	color:#b00;
+}
+.yellowNumber{
+	color:#e78c07;
+}
+.sapMObjectIdentifierTextBellow{
+	margin-top:0 !important;
+}

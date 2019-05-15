@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.app.template.controller.FirstView"
+	displayBlock="true">
+		<Page title="{i18n>title}">
+			<content>
+				<Text text="First View" />
+			</content>
+		</Page>
+</mvc:View>

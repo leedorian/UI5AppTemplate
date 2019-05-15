@@ -1,0 +1,126 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "ui5.app.template",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.38.11"
+		},
+		"dataSources": {
+			"odataService": {
+				"uri": "/destination/ZS_SAMPLE_SRV",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "ui5.app.template.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.1",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ui5.app.template.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "odataService",
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "InlineRepeat",
+					"refreshAfterChange": false,
+					"tokenHandling": true,
+					"disableHeadRequestForToken": true,
+					"defaultOperationMode": "Server",
+					"metadataUrlParams": {
+						"sap-value-list": "none"
+					},
+					"headers": {
+						"Cache-Control": "no-cache, no-store, must-revalidate"
+					}
+				},
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"transition": "slide",
+				"async": true,
+				"viewPath": "ui5.app.template.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "FirstView",
+					"pattern": "",
+					"target": "FirstView"
+				}
+			],
+			"targets": {
+				"FirstView": {
+					"viewType": "XML",
+					"clearControlAggregation": false,
+					"viewId": "FirstView",
+					"viewName": "FirstView"
+				}
+			}
+		}
+	}
+}
